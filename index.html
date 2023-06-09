@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网站</title>
+    <script type="text/javascript">
+        var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+        var browser = navigator.userAgent.toLowerCase();
+        var isMobile = false;
+        for (var i=0; i<mobileAgent.length; i++){
+            if (browser.indexOf(mobileAgent[i])!=-1){
+                isMobile = true;
+                //判断浏览器信息匹配了移动端，就跳转到指定移动网站就可以。
+                location.href = "./mobile.html";
+                break;
+            }
+        }
+        </script>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+        }
+/*         * {
+            border: 1px solid black;
+        } */
+        .whiteGrid {
+            background-color: white;
+        }
+        .myShadow {
+            box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+                        rgb(0 0 0 / 14%) 0px 1px 1px 0px,
+                        rgb(0 0 0 / 30%) 0px 1px 3px 0px;
+        }
+        .functionalDomain {
+            padding: 10px 20px;
+            border-bottom: 1px solid rgb(190, 190, 190);
+            font-size: 14px;
+            color: #666;
+        }
+        .flex {
+            display: flex;
+        }
+        .flexMax {
+            flex: 1;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .mg {
+            margin: 8px;
+        }
+        .mgr {
+            margin-right: 8px;
+        }
+        .mgt {
+            margin-top: 8px;
+        }
+
+        /* 取消滚动条显示 */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* 屏幕小于600改变css */
+        @media (max-width:600px) {
+            .sidBar {
+                display: none;
+            }
+            .textBar {
+                flex-direction: column;
+            }
+            .dataBar {
+                flex-direction: row;
+            }
+            .rMargin {
+                margin-left: 8px;
+            }
+            .databarMargin {
+                margin: 0 0 8px;
+                flex: auto;
+            }
+        }
+
+        
+    </style>
+</head>
+<body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 20%; z-index: 1;" class="sidBar whiteGrid myShadow">
+        <!-- 头像栏 -->
+        <div 
+            style="
+                padding: 10px;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid #999;
+            "
+            class="flex"
+        >
+            <img
+                src="https://tse3-mm.cn.bing.net/th/id/OIP-C.72N1hLsUBR4MyBZds3i4VwHaHa?w=215&h=215&c=7&r=0&o=5&dpr=1.7&pid=1.7"
+                width="80px"
+                height="80px"
+                alt="头像"
+            >
+            <div style="margin-left: 10px;">主页模板</div>
+        </div>
+        <!-- 导航栏 功能区-->
+        <div class="flexMax">
+            <div class="functionalDomain">功能区</div>
+            <div class="functionalDomain">
+                <a 
+                href="./myResume.html"
+                target="_blank"
+                rel="noopener noreferrerii"
+                >
+                    个人简历及技能
+                </a>        
+            </div>
+            <div class="functionalDomain">功能区</div>
+            <div class="functionalDomain">功能区</div>
+        </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flexMax flex column">
+        <!--头部栏-->
+        <div style="height: 70px; z-index: 1;" class="whiteGrid myShadow"></div>
+        <!--内容区-->
+        <div style="overflow: auto;" class="textBar flexMax flex">
+            <!--左边区-->
+            <div style="flex: 3 " class="flex column mg">
+                <!--数据区-->
+                <div class="flex dataBar">
+                    <!--数据块-->
+                    <div style="height: 100px;" class="flexMax whiteGrid mgr myShadow databarMargin"></div>
+                    <!--数据块-->
+                    <div style="height: 100px;" class="flexMax whiteGrid mgr myShadow databarMargin"></div>
+                    <!--数据块-->
+                    <div style="height: 100px;" class="flexMax whiteGrid mgr myShadow databarMargin"></div>
+                    <!--数据块-->
+                    <div style="height: 100px;" class="flexMax whiteGrid myShadow databarMargin"></div>
+                </div>
+                <!--列表区-->
+                <div class="flex column">
+                    <!--列表项-->
+                    <div style="height: 160px;" class="whiteGrid mgt myShadow"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="whiteGrid mgt myShadow"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="whiteGrid mgt myShadow"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="whiteGrid mgt myShadow"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="whiteGrid mgt myShadow"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="whiteGrid mgt myShadow"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="whiteGrid mgt myShadow"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="whiteGrid mgt myShadow"></div>
+                    <!--列表项-->
+                    <div style="height: 160px;" class="whiteGrid mgt myShadow"></div>
+ 
+                </div>
+            </div>
+            <!--右边区-->
+            <div style="flex: 1" class="flex column mgr mgt rMargin">
+                <!--提示区-->
+                <div style="height: 150px;" class="whiteGrid myShadow"></div>
+                <!--消息区-->
+                <div style="height: 300px;" class="whiteGrid mgt myShadow"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
