@@ -5,7 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的网站</title>
-
+    <script type="text/javascript">
+        var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+        var browser = navigator.userAgent.toLowerCase();
+        var isMobile = false;
+        for (var i=0; i<mobileAgent.length; i++){
+                if (browser.indexOf(mobileAgent[i])!=-1){
+                isMobile = true;
+             //判断浏览器信息匹配了移动端，就跳转到指定移动网站就可以。
+               location.href = 'https://www.baidu.com';
+                break;
+              }
+        }
+        </script>
     <style>
         body {
             margin: 0;
@@ -73,6 +85,7 @@
             }
         }
 
+        
     </style>
 </head>
 <body class="flex">
