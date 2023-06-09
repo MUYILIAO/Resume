@@ -10,12 +10,12 @@
         var browser = navigator.userAgent.toLowerCase();
         var isMobile = false;
         for (var i=0; i<mobileAgent.length; i++){
-                if (browser.indexOf(mobileAgent[i])!=-1){
-                isMobile = true;
-             //判断浏览器信息匹配了移动端，就跳转到指定移动网站就可以。
-               location.href = 'https://www.baidu.com';
-                break;
-              }
+            if (browser.indexOf(mobileAgent[i])!=-1){
+                isMobile = true;
+                //判断浏览器信息匹配了移动端，就跳转到指定移动网站就可以。
+                location.href = "./test.html";
+                break;
+            }
         }
         </script>
     <style>
