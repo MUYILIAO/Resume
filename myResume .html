@@ -1,0 +1,687 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>沐一了的个人介绍</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="addb45cd-9140-428e-92b1-f851c895c2e3" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_wrights_first_flight.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🕹️</span></div><h1 class="page-title">沐一了的个人介绍</h1><p class="page-description"></p></header><div class="page-body"><p id="e5476d0a-3f05-4fc3-be47-c12044a067c2" class="">性别：男</p><p id="f3e9467e-89b7-4df9-ab95-160a28389068" class="">年龄：26岁</p><p id="ea1d8667-340f-418c-9548-9c528f9d5c84" class="">户籍：西安</p><p id="7af212a9-7f8c-4128-a217-0f052cba4306" class="">邮箱：12.muyiliao@gamil.com</p><p id="f8112523-eaff-488f-9459-eb8ff0e9d63c" class="">电话/微信：15069****17</p><p id="3eeb7cfc-05ba-451e-a21f-095c6c4600e6" class=""><mark class="highlight-red">其余详细个人信息见简历</mark></p><h1 id="da3a664b-db2c-4f9b-9966-9b3ed52314fe" class=""><mark class="highlight-blue">技能</mark></h1><p id="a7e1f4e6-f17f-47bb-83a6-b77c3e6c62f2" class="">熟练C/C++开发语言，开发工具VC、Qt等
+熟悉常用数据结构和常用算法,了解C++面向对象思想及设计模式
+熟悉Linux系统编程，文件IO，进程，进程间通讯，线程，线程同步，socket网络编程
+熟悉阿里物联网平台，物联网操作系统AliOS Things，阿里Haas100开发板
+熟悉树莓派软硬件开发，各类传感器操作，物联网网络通讯（MQTT协议），嵌入式中断原理及嵌入式接口技术(uart,gpio,i2c,spi,uart,pwm)
+熟悉QT Creator界面设计
+熟悉MySQL数据库基础操作
+熟悉python编程，开发工具JetBrains</p><p id="74c56b20-e2b2-4cbd-b246-4f8a19a95c45" class="">了解js、html、css语言，git、Cmake等常用工具</p><h2 id="4c9673e0-8180-4849-8e82-7418c0050643" class=""><mark class="highlight-gray">其他</mark></h2><p id="28bdc2de-00cc-4b77-a007-63e4f056660d" class="">Apsara Clouder大数据技能认证：共享单车骑行分析、基于LBS的热点店铺搜索、基于房源的画像分析外卖点餐数据分析、海量电力设备监测数据存储分析
+Apsara Clouder云计算技能认证：云服务器基础运维与管理、云数据库管理与数据迁移、云存储：对象存储管理与安全、超大流量网站的负载均衡</p><p id="bcc1e590-b1ba-46a9-8629-bbc6987d31ea" class=""><mark class="highlight-gray"><strong>机械</strong></mark> Solidworks，CAD，非标结构设计、计算机辅助设计（二维）CAD国家资质证书、计算机辅助设计（三维）CREO国家资质证书</p><p id="52f8f55c-03e0-483d-93e9-96e6bad79544" class=""><mark class="highlight-gray"><strong>电子电气</strong></mark><strong> </strong>熟悉常见电子元器件及电路，能独立完成基础电气控制方案设计</p><p id="7d30f8af-a3ec-4beb-89ac-dd6d93e6742a" class=""><mark class="highlight-gray"><strong>团队能力</strong></mark> 具有丰富的团队协作经验，能够较好的完成任务，并有一定的项目管理与协调经验</p><p id="bb60b3fc-bcd9-437f-9a20-7104203229cb" class="">
+</p><hr id="d48c2b55-12cb-4f46-9fac-16e4ab9d879d"/><h3 id="3c70cb53-4b63-425f-a15f-61622385eb20" class=""><mark class="highlight-gray">在校期间</mark></h3><p id="73bd9c7a-153a-487a-afd0-b2187db2b164" class="">第十八届全国大学生机器人大赛ROBOMASTE机甲大师赛     二等奖        机械组组长</p><p id="9cd88476-2980-4466-b041-ae26bc60557a" class="">第十四届山东省大学生机电产品创新设计大赛        二等奖    第一设计者</p><p id="90fe32cb-58ad-4f21-95ac-a76ec9a41ceb" class="">第十六届山东省大学生机电产品创新设计大赛	三等奖	第一设计者</p><p id="a291aaf0-c80e-49da-a579-2c6a85579388" class="">第七届山东省高校机器人大赛    三等奖    第一设计者</p><hr id="ed194200-c399-4355-9b73-e6b008b96c3e"/><h3 id="872ecd7c-729e-4031-98e7-02412d208faa" class="">业余爱好</h3><p id="cadcb541-c471-49e0-8038-0b106fb41da9" class="">DIY 旅行 徒步 长跑</p><h3 id="7a574681-de9a-4579-8214-0bd8524edaad" class=""><span style="border-bottom:0.05em solid"><strong>自我评价</strong></span><span style="border-bottom:0.05em solid"><strong></strong></span></h3><ol type="1" id="f28dcdf2-70ed-4876-9dc6-43ef3fb718af" class="numbered-list" start="1"><li>探索求知欲和自主能力强，能尝试不同领域并主动学习</li></ol><ol type="1" id="02629cd6-54e3-4e52-b6f4-e1f6490da96e" class="numbered-list" start="2"><li>有较强的发现问题、解决问题的能力，擅长前期项目深入调研</li></ol><ol type="1" id="51e043f0-979c-4f5b-939c-b60ece03eba0" class="numbered-list" start="3"><li>对待工作细致负责，善于思考并总结经验，做事效率成长迅速</li></ol><ol type="1" id="1ca0071d-bc05-4770-9acf-f0570cd4017c" class="numbered-list" start="4"><li>善于相处，能够换位思考、接受不同意见和批评</li></ol><ol type="1" id="971bab4e-2087-4782-b80b-145b23e09622" class="numbered-list" start="5"><li>抗压能力强，能自我调节</li></ol><hr id="2678a82f-b06c-411d-bd21-e3a1bee2078b"/><h1 id="d01f8561-8f52-495d-b11c-07eecfddfe10" class=""><mark class="highlight-blue">项目经验</mark></h1><p id="26891e57-5383-4909-a20f-430321f0fad6" class=""><em><strong>2020.7~2023.06</strong></em><em>  </em><em><strong>深圳XLGJS有限责任公司 C++软件工程师</strong></em></p><h2 id="a67a3fdd-79bc-4f6e-bd0d-12f24140cd5f" class=""><mark class="highlight-brown"><em><strong>C++/物联网项目</strong></em></mark></h2><h3 id="b518e83e-7f24-4657-a20f-ff1bae4fef3f" class=""><span style="border-bottom:0.05em solid"><em>项目一：基于物联网的远程控制智能机械臂（2022.7-2022.11）</em></span></h3><p id="960c5d5d-85b3-455c-b878-aee4ae4359c9" class=""><strong>硬件平台：Haas100</strong></p><p id="c4142894-38c3-46b9-91fc-f62ac10279b9" class=""><strong>开发环境：Windows、C/C++、Git</strong></p><p id="721254c3-3000-401a-ad70-ae4fdaa8cff5" class=""><strong>软件平台：VC、Haas Studio、钉钉小程序开发平台</strong></p><p id="ee30dc48-d765-481f-bdc4-df5f80e481cc" class=""><strong>项目描述：</strong>通过C/S架构，基于MQTT和TCP/IP传输协议,使客户端、服务器、硬件端建立联系。用户可以通过云平台操作界面对机械臂进行控制，如：抓放、旋转、抬起、放下等操作并可以实现温湿度监测、距离检测、自动防撞、信息警报等功能。服务器：阿里物联网平台创建设备模型、添加实例、配置业务逻辑。客户端：钉钉小程序，使用JS语言开发。硬件端：Haas100开发板，使用C++语言开发，git进行版本控制。</p><p id="69fde7e6-be32-41f3-9bd3-7d818359ac70" class="">各功能模块如下：</p><ul id="b6186b7a-597e-43c9-939b-93fe997739c9" class="bulleted-list"><li style="list-style-type:disc">指令采集和下发（云端）：通过连接AIOT云服务器端实现指令下发和数据回传。</li></ul><ul id="24166526-a1a7-4e27-9c76-0a5761936710" class="bulleted-list"><li style="list-style-type:disc">操作界面：用户可通过web端或钉钉小程序端等云端界面下发操作指令，云服务器接收后转发到硬件端。</li></ul><ul id="9ca8e037-16e0-4323-9daa-5bb6c283199b" class="bulleted-list"><li style="list-style-type:disc">硬件端：根据指令调用相关函数发送PWM信号控制电机运动从而实现对机械结构的操作，并返回结果到云服务器。并通过多线程将监测到的数据发送到云服务器进行业务逻辑判断并转发到客户端，实现信息的实时展示。</li></ul><ul id="2d7a78b1-588d-4784-93f2-767612d404f4" class="bulleted-list"><li style="list-style-type:disc">超声波防撞:开机自动开启超声波传感器，根据超声波传感器反馈的机械爪与障碍物间的距离，判断是否进入中断函数。</li></ul><ul id="952f72b7-ae47-490d-9659-406dd8a3c000" class="bulleted-list"><li style="list-style-type:disc">业务逻辑：阿里物联网平台配置业务逻辑，进行不同机械臂之间的联动和钉钉机器人信息提示功能。</li></ul><p id="a01708aa-b9d3-467f-8e44-ac9a741644ba" class=""><strong>我的工作：</strong>硬件端的程序逻辑及传感器驱动开发及钉钉小程序开发，包括：</p><p id="de9a8c93-684b-492e-a66d-6a66dd99b93b" class="">1)  WiFi连接功能；</p><p id="ea333578-32e1-4ed1-8ef1-61d2e5a62615" class="">2)  数据上传和指令接收功能；</p><p id="971dfa7b-02b6-4159-a214-425de058a6d5" class="">3)  温湿度传感器、超声波传感器驱动；</p><p id="cbd4a358-d2cf-4247-9f1f-717a92f543b9" class="">4)  下发指令判断函数、控制逻辑函数、PWM函数设计；</p><p id="fac96800-2c6d-4c29-92ce-ce4a8fef32ff" class="">5)  钉钉小程序前端、按键逻辑、数据下发和接收功能；</p><h3 id="06d518da-f456-4c8b-a154-907a6ad14520" class=""><span style="border-bottom:0.05em solid"><em>项目二：视频直播软件（2022.9-2023.02）</em></span></h3><p id="b547bef6-beb0-41cc-963d-2eec5c4e0d21" class=""><strong>开发环境：Windows、Linux</strong></p><p id="d50a5c14-7bad-4c26-9489-3fd8ada2e094" class=""><strong>开发工具：QT Creator、MySQL、Git</strong></p><p id="4d0d814a-91af-4591-80f7-bcb5760abf75" class=""><strong>项目描述：</strong>采用C/S架构，通过QT的QSslSocket API，基于TCP/IP和UDP,协议，实现了一个网络视频聊天系统。软件拥有登陆、注册、退出、聊天、视频直播、弹幕、文件传输等功能，登陆的用户可以创建聊天室或选择进入聊天室。在同一个聊天室内，并将在成员列表显示在线成员。每个成员都能选择群发或者私发消息，对于群发消息聊天室内的成员都可以接收聊天信息。对于私发消息，双方用户同时建立一个新的聊天界面，在此界面中只有被指定的用户与自身能看见聊天信息。服务器端实现了客户端上下线、账号上下线监控功能，聊天服务器软启停功能。</p><p id="f2d8aec4-4465-4152-bf9f-4159bf225211" class="">各功能模块如下：</p><ul id="b7f56461-fcfc-41be-a7b6-8ef7807ea811" class="bulleted-list"><li style="list-style-type:disc">登陆界面：可选择登陆和注册</li></ul><ul id="c576f428-d771-4197-afa3-eeed679fa861" class="bulleted-list"><li style="list-style-type:disc">注册界面：可选择注册和返回登陆界面 ，注册的用户信息存入数据库</li></ul><ul id="aa643f7b-ee80-41e7-890e-e6e76a5b674f" class="bulleted-list"><li style="list-style-type:disc">聊天主界面：有成员列表、房间列表、聊天框。可选择群发、创建私聊房间</li></ul><ul id="68a992a8-a26b-4418-9b90-29d8b4097556" class="bulleted-list"><li style="list-style-type:disc">房间界面：有聊天双方个人信息、聊天框。可选择私发、退出房间。</li></ul><ul id="33956f80-cca6-4172-8987-49be1030ec39" class="bulleted-list"><li style="list-style-type:disc">聊天：通过C/S架构，基于UDP传输协议实现视频直播和群发功能，每个用户作为一个客户端，通过服务器收发数据来实现聊天功能。私聊是通过TCP/IP协议实现，单击选择用户来创建新的房间私发消息。</li></ul><ul id="a0a178aa-204a-43f8-b44a-f7e0cf20904b" class="bulleted-list"><li style="list-style-type:disc">登陆验证：从数据库中查找数据，与之匹配则登陆成功，否则失败。</li></ul><p id="699a12b7-1607-4c92-96a5-49ded46e6708" class="">友好提示：实现弹窗提示功能。如：该账户已存在，请使用其他账户名、账号或密码错误登陆失败。</p><p id="a9f1ae98-bf46-44b5-8e44-79669819622c" class="">
+</p><h2 id="a83b550e-3bdf-4a1b-abe8-d2c52b806954" class=""><mark class="highlight-brown"><em>智能制造项目</em></mark></h2><h3 id="22cf0d88-bf07-4436-945f-57f0459a89c1" class=""><span style="border-bottom:0.05em solid"><em>项目一：全自动分光编带机（2020.07-2021.05）</em></span></h3><p id="ac475819-b560-4cba-9578-40480a8ed906" class=""><strong>项目描述</strong><strong>：</strong>该机用于SMD类LED元件的自动化分类和包装。在包装工艺流程前对元件的电压、电流、流明、光谱等参数依次进行测试分析，按不同品次区分包装，统一不同批次间的差距、保障元件品质。</p><ul id="342827c8-2dd2-450c-bf7c-bec8657e537b" class="bulleted-list"><li style="list-style-type:disc">技术实现：通过振动盘将若干SMD元件送入传送机构，经工业摄像头判断正反和位置坐标后由转轮式夹具夹取，依次进行电压电流测试、光照强度测试、光谱测试。相关数据由单片机采集后发送到上位机与用户企业标准数据进行比较，上位机根据判读结果在数据库中更新产量数据并发送命令到单片机，控制电磁阀使空气传送管将元件分类到相应品次的料仓。</li></ul><p id="43ae54a5-b02b-410a-ab0b-59bd86f342b0" class=""><strong>我的职责：</strong></p><ul id="c305b81a-18c8-41d2-9d41-eb6448ad5c62" class="bulleted-list"><li style="list-style-type:disc">分光机构的程序开发；</li></ul><ul id="c7fd7347-ea21-45ec-9a19-2aeda25b1986" class="bulleted-list"><li style="list-style-type:disc">分光机构的机械结构迭代；</li></ul><h3 id="e42a6e3c-3dad-4488-af06-057d222475a1" class=""><span style="border-bottom:0.05em solid"><em>项目二：真空匀质机（2021.03-至今）</em></span></h3><p id="ec04cf38-318f-45cf-b408-53e99e022d97" class=""><strong>项目描述：</strong>双传动轴行星齿轮式双摆臂真空匀质机，用于快速搅拌物料。采用上位机控制、PLC伺服驱动的技术方案。</p><ul id="8abf57e6-ff9f-41bb-b3f1-0147f38ba9e0" class="bulleted-list"><li style="list-style-type:disc">用途：精细化工、电子制造、科学实验;</li></ul><ul id="cb3132f7-4d92-4500-b272-342377b917f2" class="bulleted-list"><li style="list-style-type:disc">特点：公自转速独立可调、低噪音、低成本;</li></ul><p id="a67a1c26-6da4-4094-b994-8963ed15ef92" class=""><strong>我的职责：</strong></p><ol type="1" id="e7c9d6fe-016a-4c2f-8675-cda2fbf5b853" class="numbered-list" start="1"><li>专利分析、进行结构选型和论证；</li></ol><ol type="1" id="626a6a4e-a1c3-4c52-b6ab-16504e057089" class="numbered-list" start="2"><li>机械结构设计、电气设计及元件选型</li></ol><ol type="1" id="89a97546-6428-4d3e-b776-c3898814445e" class="numbered-list" start="3"><li><strong>上位机及嵌入式程序开发</strong></li></ol><ol type="1" id="28c8531c-d5a2-46e6-a7b1-ff79c1522c30" class="numbered-list" start="4"><li>调试、优化和迭代；</li></ol><ol type="1" id="264c6741-2be2-46e8-ad78-e6357fb7ab7c" class="numbered-list" start="5"><li>协助制定生产工艺及流程方案。</li></ol><p id="f5231f00-52d5-4321-a819-60b5106ffc59" class=""><strong>成果：</strong>通过逐步迭代，改进结构、优化控制方案，从而大幅度降低运行噪音和震动。</p><h3 id="6ad3c92a-118e-46f5-9c7d-9b60fcc6f35b" class=""><span style="border-bottom:0.05em solid"><em>项目三：多头高速固晶机（2021.06-2023.02）</em></span></h3><p id="979eeb5a-98f3-4907-af43-74b95b3522cc" class=""><strong>项目描述</strong><strong>：</strong>该机用于SMD类LED元件的生产和封装工艺。能自动完成备胶、扩片、刺片、固晶、焊线等工艺流程。分为上位机、工控、视觉、机械四个技术部分。</p><ul id="e939ad81-ef5a-405d-a95d-cb1750446ba2" class="bulleted-list"><li style="list-style-type:disc">技术实现：通过视觉识别定位每个工序的XY坐标，将LED晶片从晶片盘吸取后贴装到PCB（印刷线路板）上的设定位置，并使用超声波压焊使LED晶片通过合金线材连接到电极上，完成内外引线的连接和晶片的固定工作;</li></ul><ul id="4a89e457-8296-4f7e-b042-9bb9f72edbed" class="bulleted-list"><li style="list-style-type:disc">解决方案：上银直线导轨、CAN总线、迈德威视MV-SUA33GM-T工业摄像头及整体方案、三菱MELSEC iQ-R 系列PLC、安川直线伺服电机等；</li></ul><ul id="b2b70d49-86a9-499a-a110-f51d2e1105e0" class="bulleted-list"><li style="list-style-type:disc">特点：精度高（5mil）、速度快（70ms每周期）;</li></ul><p id="3efb472f-521a-4cb2-a389-f40521b33ddf" class=""><strong>我的职责：</strong></p><ol type="1" id="42988f4f-c0a9-4ce4-a35e-da18017a4637" class="numbered-list" start="1"><li>设计平面刷胶机构、料片传送机构、整机气压传动结构和布局；</li></ol><ol type="1" id="b1bd80a6-0222-4727-8b8a-65db99fc6013" class="numbered-list" start="2"><li>协助电气工程师完成整体电气布局和电机方案选型；</li></ol><ol type="1" id="380fbaea-3e76-45b6-b413-e990587b60f4" class="numbered-list" start="3"><li>参与程序设计，负责工序和位置传感器部分，以及上位机Qt操作界面部分；</li></ol><ol type="1" id="a1ce0daa-fa47-41d2-82fa-164277df19f2" class="numbered-list" start="4"><li>协助其他工程师进行整机调试；</li></ol><p id="e2a4af1e-158a-4ec0-af11-9a697a664a59" class="">
+</p><p id="600490c5-1b79-4a6f-9d19-69cd5144891f" class=""><mark class="highlight-red"><strong><em>2019.12~2020.6（毕业实习） </em></strong></mark><strong><em>青岛MKGYSBWX有限责任公司 电子电气工程师助理</em></strong></p><p id="3e421353-446f-4936-96a2-4df84be102e0" class=""><em>描述：PLC 、工控机、上位机、变频器、伺服驱动器、伺服电机、I／O板卡、传感器等设备的故障诊断及检修。</em></p><p id="71e05a57-d9d9-4972-ac98-1612de4c7033" class=""><em>我的职责：</em></p><ol type="1" id="8631093d-568a-439a-ba1a-ab64f319e7d3" class="numbered-list" start="1"><li><em>协助工程师排查设备故障点、记录故障特征;</em></li></ol><ol type="1" id="855e5984-5fa7-4f95-ab33-3bbe51586b67" class="numbered-list" start="2"><li><em>根据逻辑电路类型测量各项参数，查找对比元器件型号及参数、标记故障点;</em></li></ol><ol type="1" id="64b499a7-34df-4ae5-aa73-318f8149958b" class="numbered-list" start="3"><li><em>维修故障电路、更换故障元件；</em></li></ol><ol type="1" id="beca0fcd-14f8-45e9-aff9-56159f13c905" class="numbered-list" start="4"><li><em>老化测试，填写BOM表、维修卡；</em></li></ol><p id="c8c1b7e0-8611-49b0-aea9-feef4e69254f" class=""><strong>项目一：电机对拖试验平台（2019.12-2020.2）</strong></p><p id="405d7446-e487-44cb-b3f8-34f546a7d94f" class=""><strong>项目描述</strong><strong>：</strong>用于小型伺服电机的可调功率式电机对扭平台，以普通永磁同步电机做为负载端对被测电机进行加载试验，测试被测电机在对拖过程中的扭矩，转速的变化及电机运行状态。</p><p id="1abd483c-dcad-47c1-8e81-7d9e0a9cab6f" class="">1)  用途：精细化工、电子制造;</p><p id="d5d823e4-b5ab-4a63-9fdc-d9583befdce7" class="">2)  特点：低噪音、低成本;</p><p id="c215a63b-cdb5-4189-b1d1-cbdbf3ade8c2" class=""><strong>我的职责：</strong></p><ol type="1" id="0d2934db-0f2f-4532-839e-3d8246125755" class="numbered-list" start="1"><li>结构设计、协调加工；</li></ol><p id="e9c9324e-3e76-412c-8278-1cdd53865b98" class="">协助电气工程师进行电气布局；</p><p id="c8feb9e4-fb56-44b5-9cab-1fb13d7feff0" class="">
+</p><hr id="4967ce4f-69f6-467a-b32b-6b24c79fed3c"/><p id="99537bfc-e95e-4220-a5ad-f63902276367" class="">
+</p></div></article></body></html>
