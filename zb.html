@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++直播软件</title>
+</head>
+<style>
+    body{
+        background: #000;
+        margin:0;
+    }
+    .box{
+        width:1300px;
+        margin:0 auto;
+        position:relative;
+    }
+    .box .left{
+        width:600px;
+        height:620px;
+        background-color:#000;
+        position:absolute;
+       
+    }
+/*     .box .center{
+        height:620px;
+        background-color:#000;
+        margin:0 320px 0 320px;
+    } */
+    .box .right{
+        width:600px;
+        height:620px;
+        background-color:#000;
+        position:absolute;
+        right:0;
+        top:0;
+ 
+    }
+</style>
+
+<body>
+    <div>
+        <h3 align="center"><font color="white">C++直播软件</h3>
+    </div>        
+        <div class="box">
+            <div class="left">
+               <video width="600" height="600" controls autoplay>
+                <source src="./video/zhibo1.mp4" type="video/mp4">
+                <object data="zhibo1.mp4" width="320" height="240">
+                    <embed width="320" height="240" src="./video/zhibo1.mp4">
+                </object> 
+            </div>
+            <div class="right">
+                <video width="600" height="600" controls autoplay>
+                <source src="./video/zhibo2.mp4" type="video/mp4">
+                <object data="zhibo2.mp4" width="320" height="240">
+                    <embed width="320" height="240" src="./video/zhibo2.mp4">
+                </object>
+            </div>
+        </div> 
+
+<!--     <video width="320" height="240" controls autoplay>
+        <source src="./video/gujing.mp4" type="video/mp4">
+        <object data="gujing.mp4" width="320" height="240">
+            <embed width="320" height="240" src="./video/gujing.mp4">
+        </object>
+    <video width="520" height="240" controls autoplay>
+        <source src="./video/jiemian.mp4" type="video/mp4">
+        <object data="jiemian.mp4" width="320" height="240">
+            <embed width="320" height="240" src="./video/jiemian.mp4">
+        </object> -->
+</body>
+</html>

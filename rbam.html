@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于阿里云的IOT智能机械臂</title>
+</head>
+<style>
+    body{
+        background: #000;
+        margin:10px;
+    }
+    .box{
+        width:1300px;
+        margin:0 auto;
+        position:relative;
+    }
+    .box .left{
+        width:600px;
+        height:300px;
+        background-color:#000;
+        position:absolute;
+    }
+    .box .right{
+        width:600px;
+        height:300px;
+        background-color:#000;
+        position:absolute;
+        right:0;
+        top:0;
+    }
+    .box .dl {
+        width: 600px;
+        height: 300px;
+        background-color: #000;
+        position: absolute;
+        top: 320px;
+
+    }
+    .box .dr {
+        width: 600px;
+        height: 300px;
+        background-color: #000;
+        position: absolute;
+        right: 0; 
+        top: 320px;
+    }
+</style>
+
+<body>
+    <div>
+        <h3 align="center"><font color="white">基于阿里云的IOT智能机械臂</h3>
+    </div>        
+        <div class="box">
+            <div class="left">
+               <video width="600" height="300" controls autoplay>
+                <source src="./video/rb1.mp4" type="video/mp4">
+                <object data="rb1.mp4" width="320" height="240">
+                    <embed width="320" height="240" src="./video/rb1.mp4">
+                </object> 
+            </div>
+            <div class="right">
+                <video width="600" height="300" controls autoplay>
+                <source src="./video/rb2.mp4" type="video/mp4">
+                <object data="rb2.mp4" width="320" height="240">
+                    <embed width="320" height="240" src="./video/rb2.mp4">
+                </object>
+            </div>
+            <div class="dl">
+                <video width="600" height="300" controls autoplay>
+                <source src="./video/rb3.mp4" type="video/mp4">
+                <object data="rb3.mp4" width="320" height="240">
+                    <embed width="320" height="240" src="./video/rb3.mp4">
+                </object>
+            </div>
+            <div class="dr">
+                <video width="600" height="300" controls autoplay>
+                <source src="./video/rb4.mp4" type="video/mp4">
+                <object data="rb4.mp4" width="320" height="240">
+                    <embed width="320" height="240" src="./video/rb4.mp4">
+                </object>
+            </div>
+        </div> 
+
+<!--     <video width="320" height="240" controls autoplay>
+        <source src="./video/gujing.mp4" type="video/mp4">
+        <object data="gujing.mp4" width="320" height="240">
+            <embed width="320" height="240" src="./video/gujing.mp4">
+        </object>
+    <video width="520" height="240" controls autoplay>
+        <source src="./video/jiemian.mp4" type="video/mp4">
+        <object data="jiemian.mp4" width="320" height="240">
+            <embed width="320" height="240" src="./video/jiemian.mp4">
+        </object> -->
+</body>
+</html>
