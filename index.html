@@ -1,277 +1,327 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网站</title>
+    <title>我的个人站</title>
     <script type="text/javascript">
         var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
         var browser = navigator.userAgent.toLowerCase();
         var isMobile = false;
-        for (var i=0; i<mobileAgent.length; i++){
-            if (browser.indexOf(mobileAgent[i])!=-1){
+        for (var i = 0; i < mobileAgent.length; i++) {
+            if (browser.indexOf(mobileAgent[i]) != -1) {
                 isMobile = true;
                 //判断浏览器信息匹配了移动端，就跳转到指定移动网站就可以。
                 location.href = "./mobile.html";
                 break;
             }
         }
-        </script>
+    </script>
+
     <style>
         body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
-            height: 100vh;
-            background-color: #eee;
+            padding: 0;
+            background-color: #f8f9fa;
+            /* Light gray background */
+            color: #343a40;
+            /* Dark gray text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-/*         * {
-            border: 1px solid black;
-        } */
+
+        header {
+            background-color: #1c8aff;
+            /* Primary blue color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        aside {
+            width: 100%;
+            max-width: 300px;
+            
+            background-color: #343a40;
+            /* Dark gray background */
+            color: #fff;
+            padding: 20px;
+            /* position: fixed; */
+        }
+
+        section {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* 添加透明的右边栏 */
+        .right-sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.1); /* 使用rgba设置透明度 */
+            position: fixed;
+            right: 0;
+            top: 50px;
+            z-index: 2; /* 确保透明右边栏在内容和侧边栏之上 */
+        }
+
         .whiteGrid {
             background-color: white;
         }
+
         .blueGrid {
-            background-color: #78bfc1; 
+            background-color: #1c8aff
+                /*  #78bfc1; */
         }
+
         .myShadow {
             box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
-                        rgb(0 0 0 / 14%) 0px 1px 1px 0px,
-                        rgb(0 0 0 / 30%) 0px 1px 3px 0px;
+                rgb(0 0 0 / 14%) 0px 1px 1px 0px,
+                rgb(0 0 0 / 30%) 0px 1px 3px 0px;
         }
+
         .functionalDomain {
             padding: 10px 20px;
             border-bottom: 1px solid rgb(190, 190, 190);
             font-size: 14px;
             color: #666;
         }
+
         .flex {
             display: flex;
         }
+
         .flexMax {
             flex: 1;
         }
+
         .column {
             flex-direction: column;
         }
+
         .mg {
             margin: 8px;
         }
+
         .mgr {
             margin-right: 8px;
         }
+
         .mgt {
             margin-top: 8px;
+        }
+
+        .button {
+            background-color: white;
+            /* Green */
+            border: none;
+            color: #140702;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            font-family: SimHei;
+            font-weight: bold;
         }
 
         /* 取消滚动条显示 */
         ::-webkit-scrollbar {
             display: none;
         }
-        
+
         /* 屏幕小于600改变css */
-        @media (max-width:600px) {
+        @media (max-width:800px) {
+
+            aside {
+                width: 20%;
+                max-width: none;
+                /* position: static; */
+            }
+
             .sidBar {
                 display: none;
             }
+
             .textBar {
                 flex-direction: column;
             }
+
             .dataBar {
                 flex-direction: row;
             }
+
             .rMargin {
                 margin-left: 8px;
             }
+
             .databarMargin {
                 margin: 0 0 8px;
                 flex: auto;
             }
         }
-
-        
     </style>
 </head>
-<body class="flex">
-    <!-- 侧边栏 -->
-    <div style="width: 20%; z-index: 1;" class="sidBar whiteGrid myShadow">
-        <!-- 头像栏 -->
-        <div 
-            style="
-                padding: 10px;
-                align-items: center;
-                justify-content: center;
-                border-bottom: 1px solid #999;
-            "
-            class="flex"
-        >
-            <img
-                src="./picture/head.jpg"
-                width="100px"
-                height="100px"
-                alt="头像"
-            >
-            <div style="margin-left: 10px;">沐一了</div>
-        </div>
-        <!-- 导航栏 功能区-->
-        <div align="center" class="flexMax">
-            <div class="functionalDomain">
-                <a 
-                href="./myResume.html"
-                target="_blank"
-                rel="noopener noreferrerii"
-                style="color: red;"
-                >
-                    个人简历
-                </a>        
+
+<body>
+    <header style="display: flex; justify-content: center; align-items: center; text-align: center;">
+        <h1 style="display: flex; align-items: center;">
+            <div>
+                <img src="./picture/head.png" width="100px" height="100px" alt="头像">
             </div>
+            <div style="margin-left: 10px;">沐一了的个人简介</div>
+        </h1>
+    </header>
+
+
+
+    <main>
+        <aside>
+            <h2>
+                <a href="./myResume.html" target="_blank" rel="noopener noreferrer" style="color: #007bff;">
+                个人简历(web版)
+                </a>
+            </h2>
+            <p>男</p>
+            <p>27岁</p>
+            <p>12.muyiliao@gamil.com</p>
+            <p>开发语言：C++</p>
+
             <div class="functionalDomain">
-                <a 
-                href=""
-                target="_blank"
-                rel="noopener noreferrerii"
-                >
-                    一些爱好
-                </a> 
-            </div>
-            <div class="functionalDomain">
-                <a
-                href="./qa.html"
-                target="_blank"
-                rel="noopener noreferrerii"
-                >
-                    一些自问自答，看完有助于深入交流和加快面试进程
+                <a href="./qa.html" target="_blank" rel="noopener noreferrer" style="color: red;">
+                    一些自问自答，看完有助于深入交流和加快进度
                 </a>
             </div>
             <div class="functionalDomain">
-                <a 
-                href="./mobile.html"
-                target="_blank"
-                rel="noopener noreferrerii"
-                >
-                    击此选项手动跳转到移动端主页
-                </a> 
+                <a href="./mobile.html" target="_blank" rel="noopener noreferrer">
+                    <button style="color: #78bfc1;">击此手动跳转到移动端主页</button>
+                </a>
             </div>
-        </div>
-    </div>
-    <!-- 主区域 -->
-    <div class="flexMax flex column">
-        <!--头部栏-->
-        <div align="center" style="height: 70px; z-index: 1;" class="whiteGrid myShadow">
-            <h1>我的个人站</h1>
-        </div>
-        <!--内容区-->
-        <div style="overflow: auto;" class="textBar flexMax flex">
-            <!--左边区-->
-            <div style="flex: 3 " class="flex column mg">
-                <!--数据区-->
-                <div class="flex dataBar">
-                    <!--数据块-->
-                    <div style="height: 100px;" class="flexMax blueGrid mgr myShadow databarMargin"></div>
-                    <!--数据块-->
-                    <div style="height: 100px;" class="flexMax blueGrid mgr myShadow databarMargin"></div>
-                    <!--数据块-->
-                    <div style="height: 100px;" class="flexMax blueGrid mgr myShadow databarMargin"></div>
-                    <!--数据块-->
-                    <div style="height: 100px;" class="flexMax blueGrid myShadow databarMargin"></div>
-                </div>
-                <!--列表区-->
-                <div class="flex column">
-                    <!--列表项-->
-                    <div align="center" style="height: 160px;" class="whiteGrid mgt myShadow">
-                          <a
-                            href="./rbam.html"
-                            target="_blank"
-                            rel="noopener noreferrerii"
-                            >
-                            基于阿里云的IOT智能机械臂
-                          </a>
-                    </div>
-                    <!--列表项-->
-                    <div align="center" style="height: 160px;" class="whiteGrid mgt myShadow">
-                           <a
-                            href="./zb.html"
-                            target="_blank"
-                            rel="noopener noreferrerii"
-                            >
-                            QT聊天软件
-                          </a>                   
-                    </div>
-                    <!--列表项-->
-                    <div align="center" style="height: 160px;" class="whiteGrid mgt myShadow">
-                          <a
-                            href="./zjgjj.html"
-                            target="_blank"
-                            rel="noopener noreferrerii"
-                            >
-                            植晶固晶机
-                          </a>                    
-                    </div>
-                    <!--列表项-->
-                    <div align="center" style="height: 160px;" class="whiteGrid mgt myShadow">
-                          <a
-                            href="./fgbdj.html"
-                            target="_blank"
-                            rel="noopener noreferrerii"
-                            >
-                            分光编带机
-                          </a>                    
-                    </div>
-                    <!--列表项-->
-                    <div align="center" style="height: 160px;" class="whiteGrid mgt myShadow">
-                          <a
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrerii"
-                            >
-                            真空匀质机
-                          </a>                    
-                    </div>
-                    <!--列表项-->
-                    <div align="center" style="height: 160px;" class="whiteGrid mgt myShadow">
-                          <a
-                            href="./djtjj.html"
-                            target="_blank"
-                            rel="noopener noreferrerii"
-                            >
-                            点胶涂胶机
-                          </a>                    
-                    </div>
-                    <!--列表项-->
-                    <div align="center" style="height: 160px;" class="whiteGrid mgt myShadow">
-                          <a
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrerii"
-                            >
-                            
-                          </a>                    
-                    </div>
-                    <!--列表项-->
-                    <div align="center" style="height: 160px;" class="whiteGrid mgt myShadow"></div>
-                    <!--列表项-->
-                    <div align="center" style="height: 160px;" class="whiteGrid mgt myShadow"></div>
- 
-                </div>
+        </aside>
+
+        <section>
+            <!-- <div class="right-sidebar">透明的侧边栏，弃用</div> -->
+            <h2>最近项目</h2>
+            <p>*附有视频，请点击每项标题（可能需要科学上网）</p>
+            <div class="project">
+                <h3>项目1
+                    <a href="./rbam.html" target="_blank" rel="noopener noreferrer">
+                        <button class="button">基于阿里云的IOT智能机械臂</button>
+                    </a>
+                </h3>
+                <p>一个基于阿里云物联网平台的C/S架构机械臂。实现自动识别拾取和相关信息的自动上传。</p>
+                <p>物联网部分硬件基于Haas100开发，通过MQTT和TCP/IP传输协议实时采集上传数据建立操作端、云服务器、硬件端的事件监控、应急响应和实时操作。用户也可以通过钉钉小程序操作界面对机械臂进行便捷控制...</p>
             </div>
-            <!--右边区-->
-            <div style="flex: 1" class="flex column mgr mgt rMargin">
-                <!--提示区-->
-                <div style="height: 150px; background-color:#FFEEBB ;" class="whiteGrid myShadow">
-                    <div align="center">
-                        <h3>一个简陋的网站，一个MVP</h3>
-                    </div>
-                </div>
-                <!--消息区-->
-                <div style="height: 300px;" class="whiteGrid mgt myShadow">
-                    <div align="center" >
-                        <h3>用来练习HTML/CSS/JS</h3>
-                        <h3>&</h3>
-                        <h3>方便在面试时展示简历和之前做过的一些项目</h3>
-                        <h4><font color="red">没有用模板，所以只有简答的自适应和跳转。推荐使用PC端浏览器最大化下观看视频</font></h4>
-                    </div>
-                </div>
+            
+            <div class="project">
+                <h3>项目2
+                    <a href="./zb.html" target="_blank" rel="noopener noreferrer">
+                        <button class="button">QT聊天软件</button>
+                    </a>
+                </h3>
+                <p>通过QT的QSslSocket API，基于TCP/IP和UDP,协议，实现了一个局域网络视频聊天系统。</p>
+                <p>客户端实现基本的登陆、注册、退出、聊天、视频直播，以及弹幕、文件传输等功能。服务器端实现了客户端上下线、账号上下线监控功能，聊天服务器软启停功能...</p>
             </div>
+
+            <div class="project">
+                <h3>项目3
+                    <a href="./zjgjj.html" target="_blank" rel="noopener noreferrer">
+                        <button class="button">植晶固晶机</button>
+                    </a>
+                </h3>
+                <p>该机用于SMD类LED元件的生产和封装工艺。能自动完成备胶、扩片、刺片、固晶、焊线等工艺流程。</p>
+                <p>分为上位机、工控、视觉、机械四个技术部分，主要参与负责工序和位置传感器部分，以及上位机Qt操作界面部分...</p>
+            </div>
+
+            <div class="project">
+                <h3>项目4
+                    <a href="./fgbdj.html" target="_blank" rel="noopener noreferrer">
+                        <button class="button">分光编带机</button>
+                    </a>
+                </h3>
+                <p>该机用于SMD类LED元件的自动化分类和包装。</p>
+                <p>在包装工艺流程前对元件的电压、电流、流明、光谱等参数依次进行测试分析，按不同品次区分包装，统一不同批次间的差距、保障元件品质。...</p>
+            </div>
+
+            <div class="project">
+                <h3>项目5
+                    <a href="./djtjj.html" target="_blank" rel="noopener noreferrer">
+                        <button class="button">点胶涂胶机</button>
+                    </a>
+                </h3>
+                <p>该机用于SMD类LED元件或其他设备的密封工艺。</p>
+                <p>采用视觉识别定位和3轴控制卡实现点胶及密封工艺...</p>
+            </div>
+
+            <div class="project">
+                <h3>项目6
+                    <a href="" target="_blank" rel="noopener noreferrer">
+                        <button class="button">真空匀质机</button>
+                    </a>
+                </h3>
+                <p>双传动轴行星齿轮式双摆臂真空匀质机，用于快速搅拌物料。采用FPGA板卡实现数据采集和上位机控制多台PLC以及伺服驱动的技术方案。...</p>
+            </div>
+
+
+        </section>
+        
+
+    </main>
+
+    <section>
+        <h2>Other</h2>
+        <p>一些奇怪的其他技能，可能无用但足够有趣...</p>
+        <p>（当然保不准什么时候就用上了呢）</p>
+        <div class="flex dataBar">
+            <!--数据块-->
+            <div style="height: 100px; background-color:#c5c5c5;" class="flexMax mgr myShadow databarMargin">
+                <p>3D打印</p>
+            </div>
+            <!--数据块-->
+            <div style="height: 100px; background-color:#c5c5c5;" class="flexMax mgr myShadow databarMargin">
+                <p>机械设计和制图</p>
+            </div>
+            <!--数据块-->
+            <div style="height: 100px; background-color:#c5c5c5;" class="flexMax mgr myShadow databarMargin">
+                <p>跑步</p>
+            </div>
+            <!--数据块-->
+            <div style="height: 100px; background-color:#c5c5c5;" class="flexMax myShadow databarMargin"></div>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        &copy; 2024 面试简介 | 一个简陋的网站，一个MVP
+    </footer>
 </body>
+
 </html>
